@@ -15,9 +15,9 @@ class Todo(db.Model):
     def __repr__(self):
         return '<Task %r>' % self.id
 
-@app.route('/')
+@app.route('/', methods=['POST','GET'])
 def index():
-    return render_template('index2.html')
+    return render_template('index3.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
